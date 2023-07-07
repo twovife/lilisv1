@@ -33,7 +33,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto py-6 px-12 text-center">
           <div className="py-6">
             <div className="text-4xl mb-3">
-              You're
+              You are
               <br />
               invited
             </div>
