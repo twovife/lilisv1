@@ -5,13 +5,77 @@ import Jumbotron from "./Pages/Jumbotron";
 import Quotes from "./Pages/Quotes";
 import Mempelai from "./Pages/Mempelai";
 import { AiOutlineGift } from "react-icons/ai";
-import { useState } from "react";
+import { BsEnvelopeOpenHeartFill } from "react-icons/bs";
+import { useEffect, useState } from "react";
 import Galery from "./Pages/Galery";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export default function Home() {
+export default function Home(props) {
   const [modalShow, setModalShow] = useState(false);
+  const [audio, setAudio] = useState(null);
+  const [isPlay, setIsPlay] = useState(true);
+  const [isPlayerShow, setIsPlayerShow] = useState(false);
+  const [banner, setBanner] = useState(true);
+  console.log(isPlayerShow);
+
+  const playAudio = (isPlay) => {
+    if (isPlay) {
+      audio?.play();
+      setIsPlay(true);
+      return;
+    }
+    audio?.pause();
+    setIsPlay(false);
+  };
+
+  const bannerHandler = (e) => {
+    window.scrollTo({ top: 0 });
+    setTimeout(() => {
+      setBanner(false);
+      playAudio(true);
+      setIsPlayerShow(true);
+    }, 500);
+  };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+    });
+    setAudio(new Audio("/music/tulus.mp3"));
+  }, []);
+
   return (
     <main className="w-screenmin-h-screen overflow-x-hidden relative z-0">
+      <button
+        onClick={() => playAudio(!isPlay)}
+        className={`fixed transition z-40 flex items-center justify-center w-12 h-12 border border-black rounded-full bottom-16 right-2 bg-white/50 ${
+          isPlayerShow ? "opacity-100" : "opacity-0"
+        }`}>
+        <Image alt="playback" src={isPlay ? "/stop.svg" : "/play.svg"} width={20} height={20} />
+      </button>
+      <div
+        className={`${
+          banner ? `translate-y-0` : `-translate-y-full`
+        } bg-[url('/images/aset1.jpg')] bg-cover bg-bottom lg:bg-center bg-no-repeat w-full h-screen fixed top-0 z-50 duration-500`}>
+        <div className="max-w-7xl mx-auto flex justify-evenly items-center flex-col w-full h-full">
+          <div className="text-5xl text-center bold text-white leading-relaxed">
+            The Wedding of
+            <br />
+            Lilis & Davit
+          </div>
+          <div>
+            <div className="text-white text-xl underline">Special Invit to :</div>
+            <div className="text-white text-xl font-bold uppercase">{props.searchParams.to}</div>
+          </div>
+          <button
+            className="bg-white flex px-4 py-2 rounded-lg gap-3 items-center justify-evenly text-lg border-2 border-dotted"
+            onClick={bannerHandler}>
+            <BsEnvelopeOpenHeartFill />
+            <span>Open</span>
+          </button>
+        </div>
+      </div>
       <Jumbotron />
       <Quotes />
       <Mempelai />
