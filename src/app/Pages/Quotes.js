@@ -16,8 +16,8 @@ const Quotes = () => {
           </svg>
           <blockquote>
             <p className="text-lg lg:text-2xl italic text-gray-900 dark:text-white font-semibold">
-              "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
-              cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+              &quot;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar
+              kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.&quot;
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center">
