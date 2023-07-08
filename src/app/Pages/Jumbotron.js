@@ -23,7 +23,7 @@ const Jumbotron = () => {
             banner ? "opacity-100" : "opacity-0"
           }`}>
           <div
-            className={`${dancing.className}  text-5xl md:text-6xl text-center text-white leading-tight tracking-wider mt-24 whitespace-nowrap`}>
+            className={`${dancing.className}  text-5xl sm:text-7xl text-center text-white leading-tight tracking-wider mt-24 whitespace-nowrap`}>
             <span className={`${perisinne.className} text-2xl`}>The Wedding of</span>
             <br />
             Lilis <span className="text-3xl">&</span> David
