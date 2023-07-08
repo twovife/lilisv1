@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Questrial, Parisienne, Dancing_Script } from "next/font/google";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
+
+const perisinne = Parisienne({ subsets: ["latin"], weight: ["400"] });
+const dancing = Dancing_Script({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+const questrial = Questrial({ subsets: ["latin"], weight: ["400"] });
 
 const Jumbotron = () => {
+  const [banner, setBanner] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBanner(true);
+    }, 500);
+  });
+
   return (
-    <section className="h-[80vh] bg-[url(/images/aset8.jpg)] bg-no-repeat bg-cover bg-center relative">
-      <div></div>
+    <section className={`h-[100vh] bg-[url(/images/aset8.jpg)] bg-no-repeat bg-cover bg-center relative z-0 ${questrial.className}`}>
+      <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-black/10 z-20 left-0 top-0">
+        <div
+          className={`w-full h-1/2 justify-center items-center text-white text-center duration-500 delay-100 ${
+            banner ? "opacity-100" : "opacity-0"
+          }`}>
+          <div className={`${dancing.className} text-6xl text-center text-white leading-tight tracking-wider mt-24`}>
+            <span className={`${perisinne.className} text-3xl`}>The Wedding of</span>
+            <br />
+            Lilis <span className="text-3xl">&</span> Davit
+          </div>
+          <div className="text-2xl">Sabtu, 15 Juli 2023</div>
+        </div>
+      </div>
+      <div className="absolute z-50 bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-center flex-col gap-3 text-white/40">
+        <span className="animate-bounce">Scoll Bawah</span>
+        <BsFillArrowDownCircleFill className="w-8 h-8 animate-bounce" />
+      </div>
       <div data-negative="false" className="z-10 absolute w-screen -left-3 rotate-180 -bottom-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" height={"28px"} width={"100%"}>
           <path

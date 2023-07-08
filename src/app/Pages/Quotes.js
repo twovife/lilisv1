@@ -5,7 +5,7 @@ const Quotes = () => {
   return (
     <section className="bg-white">
       <div className="max-w-7xl mx-auto pt-12 pb-6 px-12">
-        <figure className="w-full mx-auto text-center space-y-3 mb-3">
+        <figure data-aos="fade" data-aos-anchor-placement="center-bottom" className="w-full mx-auto text-center space-y-3 mb-3">
           <svg
             className="w-10 h-10 mx-auto text-gray-400 dark:text-gray-600"
             aria-hidden="true"
@@ -20,14 +20,17 @@ const Quotes = () => {
               kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.&quot;
             </p>
           </blockquote>
-          <figcaption className="flex items-center justify-center">
+          <figcaption data-aos="fade" data-aos-delay="100" className="flex items-center justify-center">
             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
               <cite className="text-sm text-gray-500 dark:text-gray-400">- Q.S. Ar-Rum: 21 -</cite>
             </div>
           </figcaption>
         </figure>
-        <div className="mx-auto w-[35vw] h-[35vw] lg:w-[10vw] lg:h-[10vw] flex justify-center items-center">
-          <Image src={"/images/decoration1.png"} style={{ objectFit: "cover" }} quality={100} width={1000} height={1000} />
+        <div
+          data-aos="fade"
+          data-aos-anchor-placement="bottom-bottom"
+          className="mx-auto w-[35vw] h-[35vw] lg:w-[10vw] lg:h-[10vw] flex justify-center items-center">
+          <Image alt="praweding" src={"/images/decoration1.png"} style={{ objectFit: "cover" }} quality={100} width={1000} height={1000} />
         </div>
       </div>
     </section>
