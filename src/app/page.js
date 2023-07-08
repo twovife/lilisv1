@@ -64,22 +64,32 @@ export default function Home(props) {
         className={`${
           banner ? `translate-y-0` : `-translate-y-full`
         } bg-[url('/images/aset1.jpg')] bg-cover bg-bottom lg:bg-center bg-no-repeat w-full h-screen fixed top-0 z-50 duration-500`}>
-        <div className="max-w-7xl mx-auto flex justify-center gap-5 items-center flex-col w-full h-full">
-          <div data-aos="fade-up" className={`${dancing.className} text-5xl text-center text-white leading-relaxed  whitespace-nowrap`}>
+        <div className="max-w-7xl mx-auto flex justify-evenly items-center flex-col w-full h-full">
+          <div data-aos="fade-up" className={`${dancing.className} text-5xl text-center text-white leading-none  whitespace-nowrap`}>
             <span className={`${perisinne.className} text-2xl`}>The Wedding of</span>
             <br />
             Lilis <span className="text-3xl">&</span> David
           </div>
-          <div data-aos="fade-up" data-aos-delay="200" className={`text-center`}>
-            <div className="text-white text-lg underline">Special Invit to :</div>
-            <div className="text-white text-lg font-bold uppercase">{props.searchParams.to ?? ""}</div>
+          <div className="flex flex-col items-center gap-5">
+            {props.searchParams.to ? (
+              <div data-aos="fade-up" data-aos-delay="200" className={`text-center`}>
+                <div className="text-white text-lg underline">Special Invit to :</div>
+                <div className="text-white text-lg font-bold uppercase">{props.searchParams.to ?? ""}</div>
+              </div>
+            ) : (
+              <div data-aos="fade-up" data-aos-delay="200" className={`text-center`}>
+                <div className="text-white text-lg underline">Special Invit for</div>
+                <div className={`${dancing.className} text-white tracking-widest font-bold text-lg`}>My Best Friend</div>
+              </div>
+            )}
+
+            <button
+              className="bg-white flex px-4 py-2 rounded-lg gap-3 items-center justify-evenly text-lg border-2 border-dotted"
+              onClick={bannerHandler}>
+              <BsEnvelopeOpenHeartFill />
+              <span>Open</span>
+            </button>
           </div>
-          <button
-            className="bg-white flex px-4 py-2 rounded-lg gap-3 items-center justify-evenly text-lg border-2 border-dotted"
-            onClick={bannerHandler}>
-            <BsEnvelopeOpenHeartFill />
-            <span>Open</span>
-          </button>
         </div>
       </div>
 
@@ -113,7 +123,7 @@ export default function Home(props) {
                 <img src="/images/decoration1.png" alt="hand-sign" className="w-1/3 lg:w-1/6 mx-auto" />
               </div>
               <div className="py-3 mb-3">
-                <CountdownTimer targetTime={new Date("July 09, 2023 08:00:00")} />
+                <CountdownTimer targetTime={new Date("July 15, 2023 09:00:00")} />
                 <button
                   onClick={() =>
                     window.open(
