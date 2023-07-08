@@ -65,7 +65,9 @@ export default function Home(props) {
           banner ? `translate-y-0` : `-translate-y-full`
         } bg-[url('/images/aset1.jpg')] bg-cover bg-bottom lg:bg-center bg-no-repeat w-full h-screen fixed top-0 z-50 duration-500`}>
         <div className="max-w-7xl mx-auto flex justify-evenly items-center flex-col w-full h-full">
-          <div data-aos="fade-up" className={`${dancing.className} text-5xl text-center text-white leading-none  whitespace-nowrap`}>
+          <div
+            data-aos="fade-up"
+            className={`${dancing.className} text-5xl md:text-6xl text-center text-white leading-none  whitespace-nowrap`}>
             <span className={`${perisinne.className} text-2xl`}>The Wedding of</span>
             <br />
             Lilis <span className="text-3xl">&</span> David
