@@ -75,8 +75,6 @@ export default function Home(props) {
             <div className="text-white text-xl font-bold uppercase">{props.searchParams.to ?? ""}</div>
           </div>
           <button
-            data-aos="fade-up"
-            data-aos-delay="300"
             className="bg-white flex px-4 py-2 rounded-lg gap-3 items-center justify-evenly text-lg border-2 border-dotted"
             onClick={bannerHandler}>
             <BsEnvelopeOpenHeartFill />
