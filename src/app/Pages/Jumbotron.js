@@ -22,12 +22,12 @@ const Jumbotron = () => {
           className={`w-full h-1/2 justify-center items-center text-white text-center duration-500 delay-100 ${
             banner ? "opacity-100" : "opacity-0"
           }`}>
-          <div className={`${dancing.className} text-6xl text-center text-white leading-tight tracking-wider mt-24`}>
-            <span className={`${perisinne.className} text-3xl`}>The Wedding of</span>
+          <div className={`${dancing.className} text-5xl text-center text-white leading-tight tracking-wider mt-24 whitespace-nowrap`}>
+            <span className={`${perisinne.className} text-2xl`}>The Wedding of</span>
             <br />
-            Lilis <span className="text-3xl">&</span> Davit
+            Lilis <span className="text-3xl">&</span> David
           </div>
-          <div className="text-2xl">Sabtu, 15 Juli 2023</div>
+          <div className="text-xl">Sabtu, 15 Juli 2023</div>
         </div>
       </div>
       <div className="absolute z-50 bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-center flex-col gap-3 text-white/40">

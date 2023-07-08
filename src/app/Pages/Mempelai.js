@@ -7,7 +7,7 @@ const abril = Abril_Fatface({ subsets: ["latin"], weight: ["400"] });
 const Mempelai = () => {
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto py-6 px-12 space-y-16 lg:space-y-0 lg:flex gap-8">
+      <div className="max-w-7xl mx-auto py-6 px-12 space-y-16 lg:space-y-0 lg:flex gap-8 text-gray-900">
         <div id="mempelai-wanita" className="text-center">
           <h2
             data-aos="fade"

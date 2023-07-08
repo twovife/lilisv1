@@ -52,7 +52,7 @@ export default function Home(props) {
   }, []);
 
   return (
-    <main className={`w-screenmin-h-screen overflow-x-hidden relative z-0 ${questrial.className}`}>
+    <main className={`w-screenmin-h-screen overflow-x-hidden relative z-0 ${questrial.className} text-gray-900`}>
       <button
         onClick={() => playAudio(!isPlay)}
         className={`fixed transition z-40 flex items-center justify-center w-12 h-12 border border-black rounded-full bottom-16 right-2 bg-white/50 ${
@@ -64,15 +64,15 @@ export default function Home(props) {
         className={`${
           banner ? `translate-y-0` : `-translate-y-full`
         } bg-[url('/images/aset1.jpg')] bg-cover bg-bottom lg:bg-center bg-no-repeat w-full h-screen fixed top-0 z-50 duration-500`}>
-        <div className="max-w-7xl mx-auto flex justify-evenly items-center flex-col w-full h-full">
-          <div data-aos="fade-up" className={`${dancing.className} text-7xl text-center text-white leading-relaxed tracking-wider`}>
-            <span className={`${perisinne.className} text-3xl`}>The Wedding of</span>
+        <div className="max-w-7xl mx-auto flex justify-center gap-5 items-center flex-col w-full h-full">
+          <div data-aos="fade-up" className={`${dancing.className} text-5xl text-center text-white leading-relaxed  whitespace-nowrap`}>
+            <span className={`${perisinne.className} text-2xl`}>The Wedding of</span>
             <br />
-            Lilis <span className="text-3xl">&</span> Davit
+            Lilis <span className="text-3xl">&</span> David
           </div>
           <div data-aos="fade-up" data-aos-delay="200" className={`text-center`}>
-            <div className="text-white text-xl underline">Special Invit to :</div>
-            <div className="text-white text-xl font-bold uppercase">{props.searchParams.to ?? ""}</div>
+            <div className="text-white text-lg underline">Special Invit to :</div>
+            <div className="text-white text-lg font-bold uppercase">{props.searchParams.to ?? ""}</div>
           </div>
           <button
             className="bg-white flex px-4 py-2 rounded-lg gap-3 items-center justify-evenly text-lg border-2 border-dotted"
@@ -125,11 +125,11 @@ export default function Home(props) {
                   data-aos-delay="400"
                   data-aos-duration="500"
                   data-aos-anchor-placement="center-bottom"
-                  className="border px-8 py-4 rounded-xl text-xl bg-gray-900 text-white font-semibold">
+                  className="border px-4 py-2 sm:px-8 sm:py-4 rounded-xl text-xl bg-gray-900 text-white font-semibold">
                   Save the date
                 </button>
               </div>
-              <div data-aos="fade-up" data-aos-delay="200" className="py-3">
+              <div data-aos="fade-up" data-aos-delay="200" className="py-3 text-gray-900">
                 <div className={`text-4xl font-black relative z-10 ${abril.className}`}>Akad Nikah</div>
                 <img src="/images/decoration4.png" alt="hand-sign" className="w-1/3 lg:w-1/6 mx-auto relative z-0 -translate-y-5" />
                 <div className="flex justify-center items-center mb-3">
@@ -142,7 +142,7 @@ export default function Home(props) {
                 </div>
                 <div className="font-semibold text-lg mb-3">Pukul 09:00 wib - selesai</div>
               </div>
-              <div data-aos="fade-up" data-aos-delay="200" className="py-3">
+              <div data-aos="fade-up" data-aos-delay="200" className="py-3 text-gray-900">
                 <div className={`text-4xl font-black relative z-10 ${abril.className}`}>Resepsi</div>
                 <img src="/images/decoration4.png" alt="hand-sign" className="w-1/3 lg:w-1/6 mx-auto relative z-0 -translate-y-5" />
                 <div className="flex justify-center items-center mb-3">
