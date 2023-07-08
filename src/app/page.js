@@ -125,7 +125,7 @@ export default function Home(props) {
                   data-aos-delay="400"
                   data-aos-duration="500"
                   data-aos-anchor-placement="center-bottom"
-                  className="border px-4 py-2 sm:px-8 sm:py-4 rounded-xl text-xl bg-gray-900 text-white font-semibold">
+                  className="border px-6 py-3 rounded-xl bg-gray-800 text-white font-semibold mb-6">
                   Save the date
                 </button>
               </div>
@@ -185,7 +185,7 @@ export default function Home(props) {
               </button>
             </div>
           </section>
-          <section>
+          <section className="bg-white">
             <div data-aos="fade-up" data-aos-delay="200" className="max-w-7xl mx-auto py-6 px-12 text-center space-y-3">
               <AiOutlineGift className="text-black text-7xl mx-auto" />
               <p className={`text-2xl font-semibold ${abril.className}`}>Kirim Hadiah</p>
@@ -204,7 +204,7 @@ export default function Home(props) {
           <section className="bg-[url('/images/aset7.jpg')] bg-cover bg-no-repeat bg-center relative z-0 h-[35vh]">
             <div className="absolute w-full h-full bottom-0 left-0 bg-gradient-to-b from-white/60 to-gray-600/60 flex flex-col justify-center items-center">
               <div className={`text-5xl font-normal ${perisinne.className}`}>Terimakasih</div>
-              <div className="max-w-md mx-auto font-semibold text-center text-lg">
+              <div className="max-w-md mx-auto font-semibold text-center mb-2">
                 Merupakan suatu kebahagiaan bila keluarga dan sahabatku tercinta bisa hadir dan merayakan hari bahagia ini bersama kami
               </div>
               <div className="text-sm font-semibold underline underline-offset-2 mb-5">Kami yang berbahagia</div>
