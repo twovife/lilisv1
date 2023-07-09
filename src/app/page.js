@@ -48,7 +48,7 @@ export default function Home(props) {
       duration: 500,
       // anchorPlacement: "bottom-bottom",
     });
-    setAudio(new Audio("/music/lagune.mp3"));
+    setAudio(new Audio("/music/introsong.mp3"));
   }, []);
 
   return (
@@ -152,7 +152,7 @@ export default function Home(props) {
                   </div>
                   <div className="text-2xl lg:text-3xl font-bold flex-1 text-left px-3 tracking-widest">Juli</div>
                 </div>
-                <div className="font-semibold text-lg mb-3">Pukul 09:00 wib - selesai</div>
+                <div className="font-semibold text-lg mb-3">Pukul 08:00 wib - selesai</div>
               </div>
               <div data-aos="fade-up" data-aos-delay="200" className="py-3 text-gray-900">
                 <div className={`text-4xl font-black relative z-10 ${abril.className}`}>Resepsi</div>
