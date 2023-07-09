@@ -14,7 +14,7 @@ const Mempelai = () => {
             data-aos-delay="100"
             data-aos-anchor-placement="center-bottom"
             className={`text-3xl font-bold ${abril.className}`}>
-            Lilis nopitasari
+            Lilis Nopitasari
           </h2>
           <p data-aos="fade" data-aos-delay="200" data-aos-anchor-placement="center-bottom" className="font-semibold">
             Putri dari
@@ -52,7 +52,7 @@ const Mempelai = () => {
             data-aos-delay="100"
             data-aos-anchor-placement="center-bottom"
             className={`text-3xl font-bold ${abril.className}`}>
-            David surya pratama
+            David Surya Pratama
           </h2>
           <p data-aos="fade" data-aos-delay="200" data-aos-anchor-placement="center-bottom" className="font-semibold">
             Putra dari

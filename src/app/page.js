@@ -103,7 +103,7 @@ export default function Home(props) {
           <section className="bg-[url('/images/aset6.jpg')] bg-cover bg-no-repeat bg-top relative z-0">
             <div className="absolute w-full h-full z-10 bg-white/60"></div>
             <div className="relative z-20">
-              <div data-aos="fade-down" className="max-w-7xl mx-auto py-6 px-12 text-center">
+              <div data-aos="fade-down" data-aos-anchor-placement="center-bottom" className="max-w-7xl mx-auto py-6 px-12 text-center">
                 <div className={`text-2xl mb-2`}>Our Story</div>
                 <div className={`text-4xl ${abril.className}`}>
                   Watch our <br />
@@ -220,7 +220,7 @@ export default function Home(props) {
                 Merupakan suatu kebahagiaan bila keluarga dan sahabatku tercinta bisa hadir dan merayakan hari bahagia ini bersama kami
               </div>
               <div className="text-sm font-semibold underline underline-offset-2 mb-5">Kami yang berbahagia</div>
-              <div className={`text-4xl ${dancing.className}`}>Lilis & Davit</div>
+              <div className={`text-4xl ${dancing.className}`}>Lilis & David</div>
             </div>
           </section>
           <div
